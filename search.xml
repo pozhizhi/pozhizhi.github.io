@@ -4,31 +4,6 @@
   
     
     <entry>
-      <title>jupyter</title>
-      <link href="/2022/10/10/post/"/>
-      <url>/2022/10/10/post/</url>
-      
-        <content type="html"><![CDATA[<h2 id="创建用户"><a href="#创建用户" class="headerlink" title="创建用户"></a>创建用户</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">useradd user</span><br></pre></td></tr></table></figure><h3 id="赋予权限"><a href="#赋予权限" class="headerlink" title="赋予权限"></a>赋予权限</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">chmod</span> -R +777  /home</span><br></pre></td></tr></table></figure><h2 id="进入浏览器管理后台"><a href="#进入浏览器管理后台" class="headerlink" title="进入浏览器管理后台"></a>进入浏览器管理后台</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"> 要登陆admin用户（管理用户）  /hub/admin</span><br><span class="line">启动容器</span><br></pre></td></tr></table></figure><h2 id="运行容器镜像，端口映射"><a href="#运行容器镜像，端口映射" class="headerlink" title="运行容器镜像，端口映射"></a>运行容器镜像，端口映射</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker run --gpus all --name cudadockerhub8688 -it -d -p 8688:8000 </span><br><span class="line">-e LANG=<span class="string">&quot;C.UTF-8&quot;</span> nvidia-jupyter-hub:1.2</span><br></pre></td></tr></table></figure><h2 id="进入容器"><a href="#进入容器" class="headerlink" title="进入容器"></a>进入容器</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="built_in">exec</span> -it f6b776086663 /bin/bash</span><br></pre></td></tr></table></figure><h2 id="运行容器初始脚本"><a href="#运行容器初始脚本" class="headerlink" title="运行容器初始脚本"></a>运行容器初始脚本</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"> sh start-jupyterhub.sh </span><br><span class="line"></span><br><span class="line"> sealos init --passwd 123.com \</span><br><span class="line">--master 192.168.98.16  --master 192.168.98.17  \</span><br><span class="line">--node  192.168.98.18 \</span><br><span class="line">--pkg-url https://sealyun.oss-cn-beijing.aliyuncs.com/37374d999dbadb788ef0461844a70151-1.16.0/kube1.16.0.tar.gz \</span><br><span class="line">--version v1.16.0</span><br></pre></td></tr></table></figure>]]></content>
-      
-      
-      <categories>
-          
-          <category> 人工智能 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> jupyter </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>博客搭建</title>
       <link href="/2022/10/10/hello-world/"/>
       <url>/2022/10/10/hello-world/</url>
@@ -46,6 +21,31 @@
         <tags>
             
             <tag> 博客 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>jupyter</title>
+      <link href="/2022/10/10/post/"/>
+      <url>/2022/10/10/post/</url>
+      
+        <content type="html"><![CDATA[<h2 id="创建用户"><a href="#创建用户" class="headerlink" title="创建用户"></a>创建用户</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">useradd user</span><br></pre></td></tr></table></figure><h3 id="赋予权限"><a href="#赋予权限" class="headerlink" title="赋予权限"></a>赋予权限</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">chmod</span> -R +777  /home</span><br></pre></td></tr></table></figure><h2 id="进入浏览器管理后台"><a href="#进入浏览器管理后台" class="headerlink" title="进入浏览器管理后台"></a>进入浏览器管理后台</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"> 要登陆admin用户（管理用户）  /hub/admin</span><br><span class="line">启动容器</span><br></pre></td></tr></table></figure><h2 id="运行容器镜像，端口映射"><a href="#运行容器镜像，端口映射" class="headerlink" title="运行容器镜像，端口映射"></a>运行容器镜像，端口映射</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker run --gpus all --name cudadockerhub8688 -it -d -p 8688:8000 </span><br><span class="line">-e LANG=<span class="string">&quot;C.UTF-8&quot;</span> nvidia-jupyter-hub:1.2</span><br></pre></td></tr></table></figure><h2 id="进入容器"><a href="#进入容器" class="headerlink" title="进入容器"></a>进入容器</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="built_in">exec</span> -it f6b776086663 /bin/bash</span><br></pre></td></tr></table></figure><h2 id="运行容器初始脚本"><a href="#运行容器初始脚本" class="headerlink" title="运行容器初始脚本"></a>运行容器初始脚本</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"> sh start-jupyterhub.sh </span><br><span class="line"></span><br><span class="line"> sealos init --passwd 123.com \</span><br><span class="line">--master 192.168.98.16  --master 192.168.98.17  \</span><br><span class="line">--node  192.168.98.18 \</span><br><span class="line">--pkg-url https://sealyun.oss-cn-beijing.aliyuncs.com/37374d999dbadb788ef0461844a70151-1.16.0/kube1.16.0.tar.gz \</span><br><span class="line">--version v1.16.0</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 人工智能 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> jupyter </tag>
             
         </tags>
       
